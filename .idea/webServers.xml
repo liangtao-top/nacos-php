@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="37eb0448-efcd-4f0f-a8c8-5880a679557f" name="SFTP">
+        <fileTransfer rootFolder="/app/lib/php/nacos" accessType="SFTP" host="192.168.0.204" port="22" sshConfigId="543d1187-bb13-41a9-bf1e-6aedf9a5f100" sshConfig="root@192.168.0.204:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,43 @@
+{
+  "name": "liangtao/nacos-php",
+  "type": "library",
+  "description": "Nacos2.0 PHP客户端",
+  "keywords": [
+    "php",
+    "Nacos2.0",
+    "nacos-php"
+  ],
+  "homepage": "https://github.com/liangtao-top/nacos-php",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "TaoGe",
+      "email": "liangtao.gz@foxmail.com",
+      "role": "Developer",
+      "homepage": "https://github.com/liangtao-top"
+    }
+  ],
+  "require": {
+    "php": ">=8.1"
+  },
+  "require-dev": {
+    "swoole/ide-helper": "@dev",
+    "phpunit/phpunit": "^9.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "V2dmIM\\Nacos\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "V2dmIM\\Tests\\Nacos\\": "tests/"
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://mirrors.aliyun.com/composer/"
+    }
+  ]
+}
