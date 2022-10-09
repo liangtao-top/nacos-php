@@ -107,6 +107,25 @@ class Nacos extends NameResolver
     }
 
     /**
+     * @throws \Swoole\Coroutine\Http\Client\Exception|Exception|\Swoole\Exception
+     */
+    public function getServers(string $name): ?array
+    {
+        $params['serviceName'] = $this->prefix . $name;
+        $params['healthyOnly'] = true;
+        $url                   = $this->baseUrl . '/nacos/v1/ns/instance/list?' . http_build_query($params);
+        $r                     = get($url);
+        if (!$this->checkResponse($r, $url)) {
+            return null;
+        }
+        $result = json_decode($r->getBody(), true);
+        if (empty($result)) {
+            return null;
+        }
+        return $result['hosts'];
+    }
+
+    /**
      * getPrefix
      * @return string
      * @author TaoGe <liangtao.gz@foxmail.com>
